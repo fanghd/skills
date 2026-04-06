@@ -87,11 +87,11 @@ Use `hooks` in `settings.json`:
   "hooks": {
     "PostToolUse": [{
       "type": "exec",
-      "command": "python path/to/skills/agent-content-management/context_manager.py store"
+      "command": "python agent-content-management/context_manager.py store"
     }],
     "PreResponse": [{
       "type": "exec",
-      "command": "python path/to/skills/agent-content-management/context_manager.py check"
+      "command": "python agent-content-management/context_manager.py check"
     }]
   }
 }
@@ -103,8 +103,8 @@ Configure in OpenClaw's hook system:
 
 ```yaml
 hooks:
-  on_message: python path/to/skills/agent-content-management/context_manager.py recall "{query}"
-  on_response: python path/to/skills/agent-content-management/context_manager.py store
+  on_message: python agent-content-management/context_manager.py recall "{query}"
+  on_response: python agent-content-management/context_manager.py store
 ```
 
 ### Manual / Programmatic
