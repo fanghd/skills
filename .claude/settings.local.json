@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python generate_docx.py)",
+      "Bash(python context_manager.py --help)",
+      "Bash(python context_manager.py init --config context_config.json)",
+      "Bash(python context_manager.py store --user-input \"帮我设计一套agent技能的开发流程\" --assistant-output \"建议采用TDD流程：先定义skill接口，再编写测试用例，最后实现核心逻辑。使用SKILL.md作为主文档。\" --session-id \"test-session-001\" --config context_config.json)",
+      "Bash(python context_manager.py store --user-input \"幫我设计一套agent技能的开发流程\" --assistant-output \"建议采用TDD流程：先定义skill接口，再编写测试用例，最后实现核心逻辑。使用SKILL.md作为主文档。纯文件存储，零外部依赖，使用Markdown格式保存摘要和原文，JSON维护语义索引。\" --session-id \"test-session-001\" --config context_config.json)",
+      "Bash(python context_manager.py store --user-input \"帮我设计一套agent技能的开发流程\" --assistant-output \"建议采用TDD流程：先定义skill接口，再编写测试用例，最后实现核心逻辑。使用SKILL.md作为主文档。纯文件存储，零外部依赖，使用Markdown格式保存摘要和原文，JSON维护语义索引。\" --session-id \"test-session-001\" --config context_config.json)",
+      "Bash(python context_manager.py store --user-input \"TDD 流程在 Python 中怎么写测试比较优雅\" --assistant-output \"推荐使用 pytest + dataclass 模式。测试文件统一放在 tests/ 目录下，每个 skill 对应一个 test_skill_name.py 文件。核心模式是 AAA \\(Arrange, Act, Assert\\)。\" --session-id \"test-session-001\" --config context_config.json)",
+      "Bash(python context_manager.py recall \"TDD测试流程\" --session-id test-session-001 --config context_config.json)",
+      "Bash(python context_manager.py check --current-estimated-tokens 165000 --config context_config.json)",
+      "Bash(python context_manager.py check --current-estimated-tokens 40000 --config context_config.json)",
+      "Bash(python context_manager.py search \"TDD\" --config context_config.json)",
+      "Bash(python context_manager.py list --config context_config.json)",
+      "Bash(python:*)"
+    ]
+  }
+}
